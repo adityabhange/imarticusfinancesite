@@ -212,7 +212,7 @@ function Form() {
                 <p>Year of Experience: {info.yearofexp}</p>
                 <p>Age: {info.age}</p>
                 <p>Education Gap: {info.educationgap}</p>
-                <p>Aspiration{info.aspiration}</p>
+                <p>Aspiration: {info.aspiration}</p>
             </div>
 
         </>
