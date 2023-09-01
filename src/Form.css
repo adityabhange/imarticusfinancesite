@@ -1,0 +1,300 @@
+.heads{
+    align-items: center;
+    display: flex;
+    /* text-align: center; */
+    flex-wrap: wrap;
+}
+.child1{
+    position: relative;
+    right: 22rem;
+}
+.child2{
+  position: relative;
+  right: 10rem;
+}
+.slogan{
+  position: relative;
+  bottom: 17rem;
+  left: 55rem;
+}
+.img{
+  height: 5rem;
+  position: relative;
+  left: 68rem;
+  bottom: 19rem;
+  
+} 
+.logodiv{
+  position: relative;
+}
+
+.box{
+    height: auto;
+    width: 30rem;
+    background-color: white;
+    padding: 10px 50px;
+}
+
+.inputctc{
+    background-color: rgb(243, 242, 242);
+    border-radius: 0.2rem;
+    height: 2rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+}
+
+
+/* 
+// Learn about this solution to creating custom select styles:
+// @link https://moderncss.dev/custom-select-styles-with-pure-css/ */
+
+*,
+*::before,
+*::after {
+  box-sizing:border-box;
+}
+
+:root {
+  --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+}
+
+select {
+  /* // A reset of styles, including removing the default dropdown arrow */
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: normal;
+
+  /* // Stack above custom arrow */
+  z-index: 1;
+
+  /* // Remove dropdown arrow in IE10 & IE11
+  // @link https://www.filamentgroup.com/lab/select-css.html */
+  &::-ms-expand {
+    display: none;
+  }
+
+  /* // Remove focus outline, will add on alternate element */
+  outline: none;
+}
+
+.select {
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  position: relative;
+
+  select,
+  &::after {
+    grid-area: select;
+  }
+
+  min-width: 15ch;
+  max-width: auto;
+
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.1em 0.5em;
+
+  font-size: 1.02rem;
+  cursor: pointer;
+  line-height: 0.75;
+
+  /* // Optional styles */
+  /* // remove for transparency */
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+
+  /* // Custom arrow */
+  &:not(.select--multiple)::after {
+    position: relative;
+    bottom: 10px;
+    content: "";
+    justify-self: end;
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+}
+
+/* // Interim solution until :focus-within has better support */
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 2px solid var(--select-focus);
+  border-radius: inherit;
+}
+
+select[multiple] {
+  padding-right: 0;
+
+  /*
+   * Safari will not reveal an option
+   * unless the select height has room to 
+   * show all of it
+   * Firefox and Chrome allow showing 
+   * a partial option
+   */
+  height: 6rem;
+
+  option {
+    white-space: normal;
+
+    /* // Only affects Chrome */
+    outline-color: var(--select-focus);
+  }
+
+  
+   /* * Experimental - styling of selected options
+   * in the multiselect
+   * Not supported crossbrowser
+   */ 
+    &:not(:disabled) option {
+      border-radius: 12px;
+      transition: 120ms all ease-in;
+
+      &:checked {
+         background: linear-gradient(hsl(242, 61%, 76%), hsl(242, 61%, 71%));
+         padding-left: 0.5em;
+         color: black !important;
+       }
+    } 
+}
+
+.select--disabled {
+  cursor: not-allowed;
+  background-color: #eee;
+  background-image: linear-gradient(to top, #ddd, #eee 33%);
+}
+
+label {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.select + label {
+  margin-top: 2rem;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  grid-gap: 0.5rem;
+  font-family: "Baloo 2", sans-serif;
+  background-color: #e9f2fd;
+  padding: 1rem;
+}
+
+
+
+/* <!-- HTML !--> */
+/* <button class="button-3" role="button">Button 3</button> */
+
+/* CSS */
+.button-3 {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .child1 {
+      position: relative;
+      right: 0; /* Reset the position on small screens */
+      left: 5rem; /* Adjust on small screens */
+    }
+  
+    .box {
+      width: 100%; /* Make the box width 100% on small screens */
+    }
+  
+    .inputctc {
+      width: 100%; /* Make the input width 100% on small screens */
+    }
+
+    .select {
+        /* Adjust styles for smaller screens */
+        font-size: 0.9rem; /* Reduce font size */
+        padding: 0.8em 0.4em; /* Adjust padding */
+      }
+  
+    /* Adjust other styles as needed for small screens */
+  }
+  
+  /* Media query for even smaller screens (e.g., mobile) */
+  @media screen and (max-width: 480px) {
+    .child1 {
+      left: 1rem; /* Adjust the position further on smaller screens */
+    }
+    .child2{
+        left: 1rem;
+    }
+    .select {
+        /* Further adjust styles for even smaller screens */
+        font-size: 0.8rem; /* Reduce font size even more */
+        padding: 0.6em 0.3em; /* Further adjust padding */
+      }
+    /* Adjust other styles as needed for even smaller screens */
+  }
