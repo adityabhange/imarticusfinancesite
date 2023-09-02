@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/imarticusfinancesite/static/css/main.f71d1820.css",
+    "main.css": "/imarticusfinancesite/static/css/main.a8e1c1e4.css",
     "main.js": "/imarticusfinancesite/static/js/main.c14b3a98.js",
     "static/js/787.e1d5a0ef.chunk.js": "/imarticusfinancesite/static/js/787.e1d5a0ef.chunk.js",
     "static/media/logo.png": "/imarticusfinancesite/static/media/logo.46839752fbc3644df0f3.png",
     "static/media/logo.svg": "/imarticusfinancesite/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/imarticusfinancesite/index.html",
-    "main.f71d1820.css.map": "/imarticusfinancesite/static/css/main.f71d1820.css.map",
+    "main.a8e1c1e4.css.map": "/imarticusfinancesite/static/css/main.a8e1c1e4.css.map",
     "main.c14b3a98.js.map": "/imarticusfinancesite/static/js/main.c14b3a98.js.map",
     "787.e1d5a0ef.chunk.js.map": "/imarticusfinancesite/static/js/787.e1d5a0ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f71d1820.css",
+    "static/css/main.a8e1c1e4.css",
     "static/js/main.c14b3a98.js"
   ]
 }
