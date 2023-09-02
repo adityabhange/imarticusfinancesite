@@ -49,7 +49,7 @@ function Switchs() {
             setnote("NOTE : As aspiration is matching to PGFAP Details pitch PGFAP")
         }
 
-        //EXCEPTION
+        //EXCEPTIONS
         else if((info.masters === "MBA" || info.masters === "MCOM" || info.masters === "ANY FINANACE MASTERS" || info.masters === "ANY ACCOUNTING MASTERS" || info.masters === "PGDM") && info.yearofmasters > 2020 && (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && info.year > 2018 && info.age<27 && info.educationgap < 2 && (info.aspiration === "IB FRONT OFFICE" || info.aspiration === "FINANCIAL MODELING" || info.aspiration === "EQUITY RESEARCH AND VALUATION" || info.aspiration === "ALREADY IN IB")){
             x=9
             setnote("NOTE : As this is a exceptional condition always take input from TEAM/PM")
