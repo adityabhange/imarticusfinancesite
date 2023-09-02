@@ -155,8 +155,6 @@ function Switchs() {
         <>
        
             <div className='heads'>
-                 {/* <img src={log} alt="" className='img' />
-                <p className='slogan'>Initiative By Team Pune</p> */}
                 <div className="child1">
                     <label htmlFor="">Masters</label>
                     <div className='select'>
@@ -288,6 +286,8 @@ function Switchs() {
                    
                 </div>
                 <div className='child2'>
+                <img src={log} alt="" className='img' />
+                <p className='slogan'>Initiative By Team Pune</p>
                     <div className='box'>
                     <p><b>Masters:</b> {info.masters}</p>
                     <p><b>Year of Masters:</b> {info.yearofmasters}</p>
