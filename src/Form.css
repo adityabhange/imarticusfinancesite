@@ -116,7 +116,7 @@ select {
   /* // Custom arrow */
   &:not(.select--multiple)::after {
     position: relative;
-    bottom: 10px;
+    bottom: 1px;
     content: "";
     justify-self: end;
     width: 0.8em;
