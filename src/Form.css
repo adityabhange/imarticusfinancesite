@@ -261,42 +261,63 @@ body {
 
 
 
-@media screen and (max-width: 768px) {
-    .child1 {
-      position: relative;
-      right: 0; /* Reset the position on small screens */
-      left: 5rem; /* Adjust on small screens */
-    }
-  
-    .box {
-      width: 100%; /* Make the box width 100% on small screens */
-    }
-  
-    .inputctc {
-      width: 100%; /* Make the input width 100% on small screens */
-    }
+/* Default styles (for desktop) */
 
-    .select {
-        /* Adjust styles for smaller screens */
-        font-size: 0.9rem; /* Reduce font size */
-        padding: 0.8em 0.4em; /* Adjust padding */
-      }
-  
-    /* Adjust other styles as needed for small screens */
+/* Your existing CSS code here */
+
+/* Mobile Styles (up to 480px) */
+@media screen and (max-width: 480px) {
+  .heads {
+      /* Adjust styles for the .heads container on mobile */
+      flex-direction: column; /* Stack child elements vertically */
+      align-items: flex-start; /* Align items to the left */
   }
-  
-  /* Media query for even smaller screens (e.g., mobile) */
-  @media screen and (max-width: 480px) {
-    .child1 {
-      left: 1rem; /* Adjust the position further on smaller screens */
-    }
-    .child2{
-        left: 1rem;
-    }
-    .select {
-        /* Further adjust styles for even smaller screens */
-        font-size: 0.8rem; /* Reduce font size even more */
-        padding: 0.6em 0.3em; /* Further adjust padding */
-      }
-    /* Adjust other styles as needed for even smaller screens */
+
+  .child1,
+  .child2,
+  .img,
+  .slogan,
+  .box,
+  .inputctc,
+  .select,
+  label {
+      /* Reset any positioning and adjust sizes for mobile */
+      position: static;
+      right: auto;
+      left: auto;
+      width: 100%;
   }
+
+  .body{
+    overflow-x: hidden;
+  }
+
+  .child1{
+    position: relative;
+    top: 6rem;
+  }
+
+  .slogan{
+    position: relative;
+    bottom: 45rem;
+    left: 5rem;
+  }
+
+  .img{
+    position: relative;
+    bottom: 43rem;
+    
+  }
+
+  /* Adjust other styles as needed for mobile */
+}
+
+/* Tablet Styles (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* You can define tablet-specific styles here */
+}
+
+/* Larger Screens (769px and above) */
+@media screen and (min-width: 769px) {
+  /* You can define styles for larger screens here */
+}
