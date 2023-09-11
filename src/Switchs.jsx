@@ -5,10 +5,11 @@ import log from "./images/logo.png"
 
 function Switchs() {
 
+    // const[master, setmaster] = useState("select")
+
 
     const [ctc, setctc] = useState(0);
     const [user, setuser] = useState(data)
-    const [ctcstate, setsctcstate] = useState("")
     const[note,setnote]=useState("")
     console.log(ctc)
 
@@ -39,8 +40,16 @@ function Switchs() {
         setinfo({ ...info, ...getdata })
     }
 
+    const [master,setmaster] = useState("select")
+
     const Coursehandle = () => {
-        console.log(info)
+
+       
+
+        console.log(info.masters)
+
+
+        
 
         let x = -1;
 
@@ -54,55 +63,77 @@ function Switchs() {
             x=9
             setnote("NOTE : As this is a exceptional condition always take input from TEAM/PM")
         }
-
-        else if((info.masters === "MBA" || info.masters === "MCOM" || info.masters === "ANY FINANACE MASTERS" || info.masters === "ANY ACCOUNTING MASTERS" || info.masters === "PGDM") && info.yearofmasters > 2021 && (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && info.year > 2019 && info.age < 25 && info.educationgap < 3){
+        //CIBOP
+        else if((info.masters === "MBA" || info.masters === "MCOM" || info.masters === "ANY FINANACE MASTERS" || info.masters === "ANY ACCOUNTING MASTERS" || info.masters === "PGDM") && info.yearofmasters > 2021 && (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && info.year > 2019 && info.age < 25 && info.educationgap < 3 && (info.aspiration==="INVESTMENT BANKING COURSE"||info.aspiration==="LOOKING FOR IB OPS"||info.aspiration==="WANT A JOB","BECOME FINANCIAL ANALYST"||info.aspiration==="WANTS TO CHANGE FIELD"||info.aspiration==="WANTS TO MOVE IN CORE FINANCE OPERATION"||info.aspiration==="WANT JOBS IN A BANKS"||info.aspiration==="WANT TO WORK FOR MNC")){
             x=1
             setnote("NOTE : As Age, Grad Year And  Grad Field is Matching with CIBOP Requiremnts Please pitch CIBOP (Its a flagship Program of Imarticus Learning )")
         }
 
-        else if((info.masters === "MBA" || info.masters === "MCOM" || info.masters === "ANY FINANACE MASTERS" || info.masters === "ANY ACCOUNTING MASTERS" || info.masters === "PGDM") && info.yearofmasters > 2021 && (info.education === "Engineering" || info.education === "BSC" || info.education === "BCA" || info.education === "BCS" || info.education === "BA" || info.education === "NON FINANCE NON STEM") && info.year > 2019 && (info.aspiration === "WANT A JOB" || info.aspiration === "WANTS TO CHANGE FIELD" || info.aspiration === "WANTS TO CHANGE FIELD" || info.aspiration === "WANT JOBS IN A BANKS") && info.age<25 && info.educationgap<3){
+        else if((info.masters === "MBA" || info.masters === "MCOM" || info.masters === "ANY FINANACE MASTERS" || info.masters === "ANY ACCOUNTING MASTERS" || info.masters === "PGDM") && info.yearofmasters > 2021 && (info.education === "Engineering" || info.education === "BSC" || info.education === "BCA" || info.education === "BCS" || info.education === "BA" || info.education === "NON FINANCE NON STEM") && info.year > 2019 && (info.aspiration==="INVESTMENT BANKING COURSE"||info.aspiration==="LOOKING FOR IB OPS"||info.aspiration==="WANT A JOB","BECOME FINANCIAL ANALYST"||info.aspiration==="WANTS TO CHANGE FIELD"||info.aspiration==="WANTS TO MOVE IN CORE FINANCE OPERATION"||info.aspiration==="WANT JOBS IN A BANKS"||info.aspiration==="WANT TO WORK FOR MNC") && info.age<25 && info.educationgap<3){
                 x=2;
                 setnote("NOTE :  As this is a exceptional condition, Its better to take suggestion from TEAM / PM. ")
         }
-
-        else if ((info.masters === "MBA" || info.masters === "MCOM" || info.masters === "ANY FINANACE MASTERS" || info.masters === "ANY ACCOUNTING MASTERS" || info.masters === "PGDM") && info.yearofmasters > 2020 && (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && (info.year <2021 && info.year>2018) && (info.age<27 && info.age>24) && info.educationgap<3){
+        //EXCEPTIONAL CIBOP
+        else if ((info.masters === "MBA" || info.masters === "MCOM" || info.masters === "ANY FINANACE MASTERS" || info.masters === "ANY ACCOUNTING MASTERS" || info.masters === "PGDM") && info.yearofmasters > 2020 && (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && (info.year <2021 && info.year>2018) && (info.age<27 && info.age>24) && info.educationgap<3&&(info.aspiration==="INVESTMENT BANKING COURSE"||info.aspiration==="LOOKING FOR IB OPS"||info.aspiration==="WANT A JOB","BECOME FINANCIAL ANALYST"||info.aspiration==="WANTS TO CHANGE FIELD"||info.aspiration==="WANTS TO MOVE IN CORE FINANCE OPERATION"||info.aspiration==="WANT JOBS IN A BANKS"||info.aspiration==="WANT TO WORK FOR MNC")){
             x=3;
             setnote("NOTE : As this is a exceptional condition, Its better to take suggestion from TEAM / PM. ")
         }
-
-        else if((info.masters === "MBA" || info.masters === "MCOM" || info.masters === "ANY FINANACE MASTERS" || info.masters === "ANY ACCOUNTING MASTERS" || info.masters === "PGDM") && info.yearofmasters > 2021 && (info.education === "Engineering" || info.education === "BSC" || info.education === "BCA" || info.education === "BCS" || info.education === "BA" || info.education === "NON FINANCE NON STEM") && info.year > 2019 && (info.aspiration === "BECOME FINANCIAL ANALYST" || info.aspiration === "WANTS TO MOVE IN CORE FINANCE OPERATION" || info.aspiration === "LOOKING FOR IB OPS" || info.aspiration === "INVESTMENT BANKING COURSE") && info.age<25 && info.educationgap<3){
+        //CIBOP
+        else if((info.masters === "MBA" || info.masters === "MCOM" || info.masters === "ANY FINANACE MASTERS" || info.masters === "ANY ACCOUNTING MASTERS" || info.masters === "PGDM") && info.yearofmasters > 2021 && (info.education === "Engineering" || info.education === "BSC" || info.education === "BCA" || info.education === "BCS" || info.education === "BA" || info.education === "NON FINANCE NON STEM") && info.year > 2019 && (info.aspiration==="INVESTMENT BANKING COURSE"||info.aspiration==="LOOKING FOR IB OPS"||info.aspiration==="WANT A JOB","BECOME FINANCIAL ANALYST"||info.aspiration==="WANTS TO CHANGE FIELD"||info.aspiration==="WANTS TO MOVE IN CORE FINANCE OPERATION"||info.aspiration==="WANT JOBS IN A BANKS"||info.aspiration==="WANT TO WORK FOR MNC") && info.age<25 && info.educationgap<3){
             x=4;
             setnote("NOTE : As Age, Grad Year, Grad Field and Aspiration is Matching with CIBOP Requiremnts Please pitch CIBOP (Its a flagship Program of Imarticus Learning ) ")
         } 
-        else if(info.masters === "NO MASTERS" && info.year > 2020 && (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && info.age < 25 && info.educationgap < 1 && (info.aspiration === "IB FRONT OFFICE" || info.aspiration === "FINANCIAL MODELING" || info.aspiration === "EQUITY RESEARCH AND VALUATION" || info.aspiration === "ALREADY IN IB")){
+        //NO MASTER PGFAP
+        else if(info.masters === "NO MASTERS" && info.year > 2020 && (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && info.age <25 && info.educationgap < 1 && (info.aspiration === "IB FRONT OFFICE" || info.aspiration === "FINANCIAL MODELING" || info.aspiration === "EQUITY RESEARCH AND VALUATION" || info.aspiration === "ALREADY IN IB")){
             x=5;
             setnote("NOTE : As aspiration is matching to PGFAP Details pitch PGFAP ")
         }
-
-        else if(info.masters === "NO MASTERS" && info.year > 2020 && (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && info.age < 25 && info.educationgap < 3 && (info.aspiration === "WANTS TO MOVE IN CORE FINANCE OPERATION" || info.aspiration === "WANT TO WORK FOR MNC" || info.aspiration === "WANT A JOB" || info.aspiration === "BECOME FINANCIAL ANALYST")){
+        //CIBOP
+        else if(info.masters === "NO MASTERS" && info.year > 2020 && (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && info.age < 25 && info.educationgap < 3 && (info.aspiration==="INVESTMENT BANKING COURSE"||info.aspiration==="LOOKING FOR IB OPS"||info.aspiration==="WANT A JOB","BECOME FINANCIAL ANALYST"||info.aspiration==="WANTS TO CHANGE FIELD"||info.aspiration==="WANTS TO MOVE IN CORE FINANCE OPERATION"||info.aspiration==="WANT JOBS IN A BANKS"||info.aspiration==="WANT TO WORK FOR MNC")){
             x=6;
             setnote("NOTE : As Age, Grad Year, Grad Field and Aspiration is Matching with CIBOP Requiremnts Please pitch CIBOP (Its a flagship Program of Imarticus Learning )  ")
         }
-
-        else if(info.masters === "NO MASTERS" && info.year > 2019 && (info.education === "Engineering" || info.education === "BSC" || info.education === "BCA" || info.education === "BCS" || info.education === "BA" || info.education === "NON FINANCE NON STEM") && (info.aspiration === "WANT A JOB" || info.aspiration === "WANTS TO CHANGE FIELD" || info.aspiration === "WANTS TO CHANGE FIELD" || info.aspiration === "WANT JOBS IN A BANKS")&& info.age<26 && c<=3){
+        //EXCEPTIONAL CIBOP
+        else if(info.masters === "NO MASTERS" && (info.year == 2020||info.year==2019) && (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && info.age < 25 && info.educationgap < 3 && (info.aspiration==="INVESTMENT BANKING COURSE"||info.aspiration==="LOOKING FOR IB OPS"||info.aspiration==="WANT A JOB","BECOME FINANCIAL ANALYST"||info.aspiration==="WANTS TO CHANGE FIELD"||info.aspiration==="WANTS TO MOVE IN CORE FINANCE OPERATION"||info.aspiration==="WANT JOBS IN A BANKS"||info.aspiration==="WANT TO WORK FOR MNC")){
+            x=15;
+            setnote("NOTE : As this is a exceptional condition, Its better to take suggestion from TEAM / PM also As Age, Grad Year, Grad Field and Aspiration is Matching with CIBOP Requiremnts Please pitch CIBOP (Its a flagship Program of Imarticus Learning )  ")
+        }
+        //EXCEPTIONAL CIBOP OR PG BANKING AND FINANCE
+        else if(info.masters === "NO MASTERS" && info.year > 2019 && (info.education === "Engineering" || info.education === "BSC" || info.education === "BCA" || info.education === "BCS" || info.education === "BA" || info.education === "NON FINANCE NON STEM") && (info.aspiration==="INVESTMENT BANKING COURSE"||info.aspiration==="LOOKING FOR IB OPS"||info.aspiration==="WANT A JOB","BECOME FINANCIAL ANALYST"||info.aspiration==="WANTS TO CHANGE FIELD"||info.aspiration==="WANTS TO MOVE IN CORE FINANCE OPERATION"||info.aspiration==="WANT JOBS IN A BANKS"||info.aspiration==="WANT TO WORK FOR MNC")&& info.age<26 && c<=3){
             x=7;
-            setnote("NOTE : Candidate is from non-commerce , Not fianance stream so PG banking and finance program is Good Option to start with Retail Banking Sector ")
+            setnote("NOTE : Candidate is from non-commerce , Not fianance stream so PG BANKING AND FINANCE program is Good Option. If he want to go for IB then Exceptional CIBOP is also a option")
         }
-        else if(info.masters === "NO MASTERS" && info.year > 2019 && (info.education === "Engineering" || info.education === "BSC" || info.education === "BCA" || info.education === "BCS" || info.education === "BA" || info.education === "NON FINANCE NON STEM") && (info.aspiration === "WANT A JOB" || info.aspiration === "WANTS TO CHANGE FIELD" || info.aspiration === "WANTS TO CHANGE FIELD" || info.aspiration === "WANT JOBS IN A BANKS")&& info.age<26 && c>3){
+        //PG BANKING AND FINANCE OR EXCEPTION CIBOP
+        else if(info.masters === "NO MASTERS" && info.year > 2019 && (info.education === "Engineering" || info.education === "BSC" || info.education === "BCA" || info.education === "BCS" || info.education === "BA" || info.education === "NON FINANCE NON STEM") && (info.aspiration==="INVESTMENT BANKING COURSE"||info.aspiration==="LOOKING FOR IB OPS"||info.aspiration==="WANT A JOB","BECOME FINANCIAL ANALYST"||info.aspiration==="WANTS TO CHANGE FIELD"||info.aspiration==="WANTS TO MOVE IN CORE FINANCE OPERATION"||info.aspiration==="WANT JOBS IN A BANKS"||info.aspiration==="WANT TO WORK FOR MNC")&& info.age<26 && c>3){
             x=10;
-            setnote("NOTE : According to Education, you can pitch PG BANKING but as CTC is more than 3LPA, Its better to take suggestion from TEAM / PM.")
+            setnote("NOTE : According to Education, you can pitch PG BANKING but as CTC is more than 3LPA, EXCEPTIONAL CIBOP is also a option. Its better to check with the TEAM/PM")
         }
+
+        //PG BANKING AND FINANCE
         else if(info.masters === "NO MASTERS" && info.year > 2019 && (info.education === "Engineering" || info.education === "BSC" || info.education === "BCA" || info.education === "BCS" || info.education === "BA" || info.education === "NON FINANCE NON STEM") && (info.aspiration === "WANT A JOB" || info.aspiration === "WANTS TO CHANGE FIELD" || info.aspiration === "WANTS TO CHANGE FIELD" || info.aspiration === "WANT JOBS IN A BANKS")&& info.age<26 ){
             x=11;
             setnote("NOTE :  Candidate is from non-commerce , Not fianance stream so PG banking and finance program is Good Option to start with Retail Banking Sector ")
         }
+
+        
         else if(info.masters === "NO MASTERS" && (info.year>2005 && info.year<2019) &&  (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && info.age > 26){
             x=8 ;
-            setnote("NOTE : As age and graduation is too old, CMA is the best program which will help candidate with international skills and certification")
+            setnote("NOTE : As age and graduation is too old, CMA is the best program which will help candidate with  skills upgradtion and international certification")
         }
-        else if (info.masters==="NO MASTERS"&& (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && (info.year >2018) && (info.age<27 && info.age>24) && info.educationgap<3){
+        else if (info.masters==="NO MASTERS"&& (info.education === "BBA" || info.education === "BCOM" || info.education === "BCCA" || info.education === "OTHERS COMMERCE GRADUATE" || info.education === "BA ECONOMICS" || info.education === "ANY FINANCE GRADUATE") && (info.year >2018) && (info.age<27 && info.age>24) && info.educationgap<3 && (info.aspiration==="INVESTMENT BANKING COURSE"||info.aspiration==="LOOKING FOR IB OPS"||info.aspiration==="WANT A JOB","BECOME FINANCIAL ANALYST"||info.aspiration==="WANTS TO CHANGE FIELD"||info.aspiration==="WANTS TO MOVE IN CORE FINANCE OPERATION"||info.aspiration==="WANT JOBS IN A BANKS"||info.aspiration==="WANT TO WORK FOR MNC")){
             x=12;
             setnote("NOTE : As this is a exceptional condition, Its better to take suggestion from TEAM / PM. ")
+        }
+
+
+        else if((info.masters === "MBA" || info.masters === "MCOM" || info.masters === "ANY FINANACE MASTERS" || info.masters === "ANY ACCOUNTING MASTERS" || info.masters === "PGDM") && info.yearofmasters > 2021 && (info.education === "Engineering" || info.education === "BSC" || info.education === "BCA" || info.education === "BCS" || info.education === "BA" || info.education === "NON FINANCE NON STEM") && info.year > 2019 && (info.aspiration==="INVESTMENT BANKING COURSE"||info.aspiration==="LOOKING FOR IB OPS"||info.aspiration==="WANT A JOB","BECOME FINANCIAL ANALYST"||info.aspiration==="WANTS TO CHANGE FIELD"||info.aspiration==="WANTS TO MOVE IN CORE FINANCE OPERATION"||info.aspiration==="WANT JOBS IN A BANKS"||info.aspiration==="WANT TO WORK FOR MNC") && info.age==25 && info.educationgap<3){
+            x=13;
+            setnote("NOTE :  As this is a exceptional condition, Its better to take suggestion from TEAM / PM. ")
+        }
+
+        else if(info.masters === "NO MASTERS" && info.year > 2019 && (info.education === "Engineering" || info.education === "BSC" || info.education === "BCA" || info.education === "BCS" || info.education === "BA" || info.education === "NON FINANCE NON STEM") && (info.aspiration==="INVESTMENT BANKING COURSE"||info.aspiration==="LOOKING FOR IB OPS"||info.aspiration==="WANT A JOB","BECOME FINANCIAL ANALYST"||info.aspiration==="WANTS TO CHANGE FIELD"||info.aspiration==="WANTS TO MOVE IN CORE FINANCE OPERATION"||info.aspiration==="WANT JOBS IN A BANKS"||info.aspiration==="WANT TO WORK FOR MNC")&& info.age<25 ){
+            x=14;
+            setnote("NOTE :   As this is a exceptional condition, Its better to take suggestion from TEAM / PM. ")
         }
 
       
@@ -122,32 +153,39 @@ function Switchs() {
             break;
             case 6 : setCourse("CIBOP")
             break;
-            case 7 : setCourse("PG BANKING AND FINANCE")
+            case 7 : setCourse("EXCEPTIONAL CIBOP OR PG BANKING AND FINANCE")
             break;
             case 8 : setCourse("CMA")
             break;
             case 9 : setCourse("EXCEPTIONAL PGFAP")
             break
-            case 10 : setCourse("PG BANKING AND FINANCE")
-            
-            break
+            case 10 : setCourse("PG BANKING AND FINANCE OR EXCEPTION CIBOP")
+            break;
             case 11 : setCourse("PG BANKING AND FINANCE")
-            break
+            break;
             case 12 : setCourse("EXCEPTIONAL CIBOP")
+            break;
+            case 13 : setCourse("EXCEPTIONAL CIBOP OR PG BANKING")
+            break;
+            case 14 : setCourse("EXCEPTIONAL CIBOP OR PG BANKING")
+            break;
+            case 15 : setCourse("EXCEPTIONAL CIBOP")
             break
+
             default :
             if(c<=3){
                 setCourse("PG BANKING AND FINANCE / CMA")
-                setnote("As this is Default condition please check with team")
+                setnote("As this is Default condition please check with TEAM/PM ")
             }
             else{
                 setCourse("CMA")
-                setnote("As this is Default condition please check with team")
+                setnote("As this is Default condition please check with TEAM/PM")
             }
 
         }
-
+        
     }
+
 
 
 
