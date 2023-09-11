@@ -179,7 +179,7 @@ function Switchs() {
             }
             else{
                 setCourse("CMA")
-                setnote("As this is Default condition please check with TEAM/PMs")
+                setnote("As this is Default condition please check with TEAM/PM")
             }
 
         }
